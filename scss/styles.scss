@@ -1,0 +1,335 @@
+/* リセットcss */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* リセットcss */
+
+// PC版
+@media screen and (min-width: 1024px) {
+	.header{
+		display: grid;
+		grid-template-rows:auto;
+		grid-template-columns:1fr;
+		margin-bottom: 80px;
+		&__image img {
+			width: 100%;
+			height:100%;
+			object-fit: scale-down;
+		}
+	}
+
+	.news {
+		display: grid;
+		justify-content: center;
+		grid-template-rows:38px;
+		grid-template-columns: 760px;
+		margin-bottom: 80px;
+		&__title {
+			text-align: center;
+			color: #007BFF;
+			font-weight: bold;
+			font-size: 32px;
+		}
+		&__contents {
+			&__title {
+				text-align: center;
+				font-size: 13px;
+				font-weight: bold;
+			}
+			div:nth-child(2) {
+				padding-top: 30px;
+				padding-bottom: 21px;
+			}
+			&__content {
+				padding-top: 21px;
+				padding-bottom: 21px;
+				color: #333333;
+				p {
+					display: grid;
+					grid-template-columns: 122px 1fr;
+				}
+			}
+		}
+	}
+
+	.concept {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		margin-bottom: 100px;
+		&__image {
+			img {
+				width: 100%;
+				height:100%;
+				object-fit: scale-down;
+			}
+		}
+		&__text {
+			display: grid;
+			grid-template-rows: 80px 74px;
+			justify-content: center;
+			align-content: center;
+			align-items: end;
+			p:first-child {
+				font-size: 36px;
+				color: #027BFA;
+			}
+			p:nth-child(2) {
+				font-size: 16px;
+				color: #333333;
+			}
+		}
+	}
+
+	.service {
+		display: grid;
+		justify-content: center;
+		text-align: center;
+		grid-template-rows: 40px 220px 43px;
+		margin-bottom: 80px;
+		&__title {
+			color: #007BFF;
+			font-size: 32px;
+			font-weight: bold;
+		}
+		&__images{
+			display: grid;
+			grid-template-rows: 30px 200px 30px;
+			grid-template-columns: 350px 350px 350px;
+			grid-gap: 0 30px;
+			&__image {
+				img {
+					width: 100%;
+					height:100%;
+					object-fit: scale-down;
+				}
+			}
+			&__title {
+				grid-row: 1 / 2;
+				grid-column: 2 / 3;
+			}
+			div:nth-child(2) {
+				grid-row: 2 / 3;
+				grid-column: 1 / 2;
+			}
+			div:nth-child(3) {
+				grid-row: 2 / 3;
+				grid-column: 2 / 3;
+			}
+			div:nth-child(4) {
+				grid-row: 2 / 3;
+				grid-column: 3 / 4;
+			}
+		}
+		&__btns {
+			grid-row: 4 / 5;
+			&__btn {
+				background-color: #007BFF;
+				color: white;
+				width: 200px;
+				height: 55px;
+				border-radius: 30px;
+				font-weight: bold;
+				line-height: 55px;
+				margin: 0 auto;
+				a {
+					text-decoration: none;
+					color: white;
+					display: block;
+					width: 200px;
+					height: 55px;
+				}
+			}
+		}
+	}
+
+	.copyright {
+		background-color: #1F1F1F;
+		height: 92px;
+		color: #7B7B7B;
+		display: grid;
+		justify-content: center;
+		align-items: center;
+		font-size: 12px;
+	}
+}
+
+// SP版
+@media screen and (max-width: 1024px) {
+	.header{
+		display: grid;
+		grid-template-rows:auto;
+		grid-template-columns:1fr;
+		margin-bottom: 50px;
+		height: 280px;
+		&__image img {
+			width: 100%;
+			height:100%;
+			object-fit: cover;
+		}
+	}
+
+	.news {
+		display: grid;
+		justify-content: center;
+		grid-template-rows:38px;
+		margin-bottom: 80px;
+		padding: 0 18px;
+		&__title {
+			text-align: center;
+			color: #007BFF;
+			font-weight: bold;
+			font-size: 32px;
+		}
+		&__contents {
+			display: grid;
+			grid-template-rows: 18px 46px 58px 88px;
+			row-gap: 28px;
+			&__title {
+				text-align: center;
+				font-size: 13px;
+				font-weight: bold;
+			}
+			&__content {
+				color: #333333;
+				border-bottom: 1px solid #333333;
+				p {
+					display: grid;
+					grid-template-rows: 18px 18px;
+				}
+			}
+		}
+	}
+
+	.concept {
+		display: grid;
+		grid-template-rows: 1fr 1fr;
+		margin-bottom: 40px;
+		&__image {
+			img {
+				width: 100%;
+				height:100%;
+				object-fit: scale-down;
+			}
+		}
+		&__text {
+			display: grid;
+			grid-template-rows: 80px 74px;
+			justify-content: center;
+			align-content: center;
+			align-items: end;
+			p:first-child {
+				font-size: 36px;
+				color: #027BFA;
+			}
+			p:nth-child(2) {
+				font-size: 16px;
+				color: #333333;
+			}
+		}
+	}
+
+	.service {
+		display: grid;
+		justify-content: center;
+		text-align: center;
+		grid-template-rows: 40px 1fr 50px;
+		margin-bottom: 80px;
+		&__title {
+			color: #007BFF;
+			font-size: 32px;
+			font-weight: bold;
+		}
+		&__images{
+			// display: grid;
+			// grid-template-rows: 30px 200px 30px;
+			// grid-template-columns: 350px 350px 350px;
+			// grid-gap: 0 30px;
+			&__image {
+				img {
+					width: 85%;
+					object-fit: scale-down;
+					margin-bottom: 24px;
+				}
+			}
+			&__title {
+				margin-bottom: 12px;
+			}
+		}
+		&__btns {
+			grid-row: 4 / 5;
+			&__btn {
+				background-color: #007BFF;
+				color: white;
+				width: 200px;
+				height: 55px;
+				border-radius: 30px;
+				font-weight: bold;
+				line-height: 55px;
+				margin: 0 auto;
+				a {
+					text-decoration: none;
+					color: white;
+					display: block;
+					width: 200px;
+					height: 55px;
+				}
+			}
+		}
+	}
+
+	.copyright {
+		background-color: #1F1F1F;
+		height: 92px;
+		color: #7B7B7B;
+		display: grid;
+		justify-content: center;
+		align-items: center;
+		font-size: 12px;
+	}
+}
