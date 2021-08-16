@@ -57,10 +57,22 @@ table {
 		grid-template-rows:auto;
 		grid-template-columns:1fr;
 		margin-bottom: 80px;
-		&__image img {
-			width: 100%;
-			height:100%;
-			object-fit: scale-down;
+		&__image {
+			display: grid;
+			grid-template-rows: 90px 1fr;
+			&__item1 {
+				display: grid;
+				justify-content: center;
+				align-items: center;
+				img {
+					height: 30px;
+				}
+			}
+			&__item2 img{
+				width: 100%;
+				height:100%;
+				object-fit: scale-down;
+			}
 		}
 	}
 
@@ -69,18 +81,20 @@ table {
 		justify-content: center;
 		grid-template-rows:38px;
 		grid-template-columns: 760px;
-		margin-bottom: 80px;
+		margin-bottom: 100px;
 		&__title {
 			text-align: center;
 			color: #007BFF;
 			font-weight: bold;
 			font-size: 32px;
+			font-family: Arial;
 		}
 		&__contents {
 			&__title {
 				text-align: center;
 				font-size: 13px;
 				font-weight: bold;
+				font-family: Hiragino Sans;
 			}
 			div:nth-child(2) {
 				padding-top: 30px;
@@ -90,6 +104,7 @@ table {
 				padding-top: 21px;
 				padding-bottom: 21px;
 				color: #333333;
+				border-bottom: 1px solid #EDEDED;
 				p {
 					display: grid;
 					grid-template-columns: 122px 1fr;
@@ -115,6 +130,7 @@ table {
 			justify-content: center;
 			align-content: center;
 			align-items: end;
+			font-family: Hiragino Sans;
 			p:first-child {
 				font-size: 36px;
 				color: #027BFA;
@@ -130,12 +146,13 @@ table {
 		display: grid;
 		justify-content: center;
 		text-align: center;
-		grid-template-rows: 40px 220px 43px;
-		margin-bottom: 80px;
+		grid-template-rows: 40px 260px 30px 55px;
+		margin-bottom: 100px;
 		&__title {
 			color: #007BFF;
 			font-size: 32px;
 			font-weight: bold;
+			font-family: Arial;
 		}
 		&__images{
 			display: grid;
@@ -150,6 +167,7 @@ table {
 				}
 			}
 			&__title {
+				font-family: Hiragino Sans;
 				grid-row: 1 / 2;
 				grid-column: 2 / 3;
 			}
